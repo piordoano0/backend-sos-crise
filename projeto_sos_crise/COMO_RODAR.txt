@@ -1,0 +1,37 @@
+INSTRUÇÕES PARA RODAR O PROJETO SOS CRISE
+
+1. Instalar Python (se não tiver):
+   - Baixar no python.org.
+   - IMPORTANTE: Marcar "Add Python to PATH" na instalação.
+
+2. Abrir o projeto no VS Code.
+
+3. Abrir o Terminal e rodar os comandos na ordem:
+
+   # A. Criar ambiente virtual
+   python -m venv venv
+   
+   # B. Ativar ambiente
+   # Windows:
+   .\venv\Scripts\activate
+   # Mac/Linux:
+   # source venv/bin/activate
+
+   # C. Instalar as ferramentas
+   pip install django djangorestframework
+
+   # D. Criar o Banco de Dados (baseado nos arquivos que criei)
+   python manage.py makemigrations
+   python manage.py migrate
+
+   # E. Criar usuário Administrador (Login)
+   python manage.py createsuperuser
+   (Defina usuário e senha simples)
+
+   # F. Rodar o servidor
+   python manage.py runserver
+
+4. Acessar no navegador:
+   - Painel Admin: http://127.0.0.1:8000/admin/
+   - API (Navegável): http://127.0.0.1:8000/api/
+   - Dashboard JSON: http://127.0.0.1:8000/api/dashboard-stats/
